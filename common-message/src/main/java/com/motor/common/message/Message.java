@@ -75,8 +75,15 @@ public class Message<T > implements Serializable,Cloneable {
     public String timeout(){
         return header("timeout");
     }
+
     public void timeout(String timeout){
         header("timeout", timeout);
+    }
+    public String traceId(){
+        return header("traceId");
+    }
+    public void traceId(String traceId){
+        header("traceId", traceId);
     }
     public Message toMessage(){
         Message msg = new Message();
@@ -91,5 +98,13 @@ public class Message<T > implements Serializable,Cloneable {
                 ", content=" + data +
                 '}';
 
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
     }
 }

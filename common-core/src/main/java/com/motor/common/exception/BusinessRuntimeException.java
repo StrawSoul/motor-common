@@ -15,7 +15,7 @@ public class BusinessRuntimeException extends RuntimeException {
     }
 
 
-    public ErrorCode getCode() {
+    public ErrorCode getErrorCode() {
         return code;
     }
 

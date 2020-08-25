@@ -1,7 +1,13 @@
-/home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/exception/BusinessException.java
-/home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/exception/BaseErrorCode.java
+/home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/domain/Storable.java
+/home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/domain/SearchCondition.java
 /home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/paging/PageList.java
 /home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/exception/ErrorCode.java
+/home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/domain/UnSupportRepository.java
+/home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/exception/BusinessException.java
+/home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/exception/BaseErrorCode.java
 /home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/paging/Paging.java
 /home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/business/BusinessCode.java
+/home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/domain/BaseEntity.java
+/home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/domain/Repository.java
 /home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/exception/BusinessRuntimeException.java
+/home/strowsoul/work/code/motor/motor-common/common-core/src/main/java/com/motor/common/domain/Entity.java

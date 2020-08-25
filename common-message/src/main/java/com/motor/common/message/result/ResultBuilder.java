@@ -43,7 +43,7 @@ public class ResultBuilder<T> {
     }
     public ResultBuilder<T> failed(BusinessRuntimeException e){
         exception = e;
-        return failed(e.getCode()).innerMessage(e.getMessage());
+        return failed(e.getErrorCode()).innerMessage(e.getMessage());
     }
     public ResultBuilder<T> failed(Exception e){
         exception = e;
