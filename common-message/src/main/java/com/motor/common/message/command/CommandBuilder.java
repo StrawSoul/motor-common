@@ -9,6 +9,10 @@ public class CommandBuilder {
         command = new Command();
     }
 
+    public CommandBuilder id(String id){
+        command.header("id",id);
+        return this;
+    }
     public CommandBuilder name(String name){
         command.header("name",name);
         return this;
@@ -26,6 +30,35 @@ public class CommandBuilder {
         command.header(name, value);
         return this;
     }
+    public CommandBuilder token(String token){
+        command.header("token", token);
+        return this;
+    }
+    public CommandBuilder appId(String appId){
+        command.header("appId", appId);
+        return this;
+    }
+    public CommandBuilder channel(String channel){
+        command.header("channel", channel);
+        return this;
+    }
+    public CommandBuilder traceId(String traceId){
+        command.header("traceId", traceId);
+        return this;
+    }
+    public CommandBuilder clientId(String clientId){
+        command.header("clientId", clientId);
+        return this;
+    }
+    public CommandBuilder time(String time){
+        command.header("time", time);
+        return this;
+    }
+    public CommandBuilder userId(String userId){
+        command.header("userId", userId);
+        return this;
+    }
+
     public CommandBuilder data(Object data){
         command.data(data);
         return this;

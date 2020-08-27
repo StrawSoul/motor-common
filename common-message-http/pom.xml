@@ -10,20 +10,23 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.motor</groupId>
-    <artifactId>common-core</artifactId>
-
+    <artifactId>common-message-http</artifactId>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.5</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.motor</groupId>
+            <artifactId>common-message</artifactId>
+            <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>com.github.dozermapper</groupId>
-            <artifactId>dozer-core</artifactId>
-            <version>6.1.0</version>
-        </dependency>
+
     </dependencies>
+
 </project>

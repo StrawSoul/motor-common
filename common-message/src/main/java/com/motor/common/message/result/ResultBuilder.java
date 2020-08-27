@@ -89,6 +89,10 @@ public class ResultBuilder<T> {
         header.put("moreInfo", Integer.toString(status));
         return this;
     }
+    public ResultBuilder<T> token(String token){
+        header.put("token", token);
+        return this;
+    }
 
     public void reply(ReplySender sender){
         if (sender!=null) {

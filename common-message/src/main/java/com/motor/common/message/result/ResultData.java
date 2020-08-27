@@ -3,6 +3,7 @@ package com.motor.common.message.result;
 import com.motor.common.message.Message;
 import com.motor.common.message.event.Event;
 import com.motor.common.paging.PageList;
+import com.motor.common.utils.MotorUtils;
 
 import java.util.Collection;
 import java.util.Map;
@@ -23,24 +24,7 @@ public class ResultData<T> extends Event<T> {
         return Objects.equals(header("code"), "0");
     }
     public boolean isEmpty(){
-        Object data = data();
-        if(data == null){
-            return true;
-        }else {
-            if(data instanceof Collection){
-                Collection coll = (Collection) data;
-                return coll.isEmpty();
-            }else if(data instanceof Map){
-                return ((Map) data).size() ==0;
-            }else if(data instanceof PageList){
-                return ((PageList) data).size() ==0;
-            }else if(data instanceof CharSequence){
-                String str = data.toString();
-                return str.trim().isEmpty();
-            }else{
-                return false;
-            }
-        }
+        return MotorUtils.isNull(data());
     }
     public boolean isSuccessAndNotEmpty(){
         return isSuccess() && !isEmpty();

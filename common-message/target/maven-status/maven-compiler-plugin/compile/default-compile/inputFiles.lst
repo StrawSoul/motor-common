@@ -19,5 +19,6 @@
 /home/strowsoul/work/code/motor/motor-common/common-message/src/main/java/com/motor/common/message/MessageConverter.java
 /home/strowsoul/work/code/motor/motor-common/common-message/src/main/java/com/motor/common/message/MessageModule.java
 /home/strowsoul/work/code/motor/motor-common/common-message/src/main/java/com/motor/common/message/MessageListener.java
+/home/strowsoul/work/code/motor/motor-common/common-message/src/main/java/com/motor/common/message/MessageHeaderGetter.java
 /home/strowsoul/work/code/motor/motor-common/common-message/src/main/java/com/motor/common/message/Message.java
 /home/strowsoul/work/code/motor/motor-common/common-message/src/main/java/com/motor/common/message/MessageForgedFuture.java

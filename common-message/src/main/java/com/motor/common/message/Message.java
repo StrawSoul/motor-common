@@ -1,5 +1,7 @@
 package com.motor.common.message;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +27,12 @@ public class Message<T > implements Serializable,Cloneable {
         this.header = header;
         this.data = data;
     }
-
+    public String id(){
+        return header("id");
+    }
+    public void id(String id){
+        header("id", id);
+    }
     public String type(){
         return header("type");
     }
@@ -84,6 +91,21 @@ public class Message<T > implements Serializable,Cloneable {
     }
     public void traceId(String traceId){
         header("traceId", traceId);
+    }
+    public void token(String token){
+        header("token", token);
+    }
+    public String token(){
+        return header("token");
+    }
+    public String appId(){
+        return header("appId");
+    }
+    public void appId(String appId){
+        header("appId", appId);
+    }
+    public void userId(String userId){
+        header("userId", userId);
     }
     public Message toMessage(){
         Message msg = new Message();

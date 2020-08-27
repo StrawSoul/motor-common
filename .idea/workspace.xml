@@ -2,19 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09ed8a57-90dd-48ab-9c57-fec2f9fdcb5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/domain/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/domain/Storable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/exception/ParameterEmptyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/exception/ParameterLegalException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/utils/BeanMapperUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/utils/MotorUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/utils/StringToDateConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/validator/BaseValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-core/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-core/src/main/resources/META-INF/dozer-date.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-message-http/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-message-http/src/main/java/com/motor/message/http/servlet/HttpServletCommandBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-message-http/src/main/java/com/motor/message/http/servlet/HttpServletRequestMessageHeaderGetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/MessageHeaderGetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/common-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/common-core.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/exception/BusinessRuntimeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/exception/BusinessRuntimeException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-core/target/common-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/target/common-core-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-message/common-message.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/common-message.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/command/CommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/command/CommandBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/event/EventBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/event/EventBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/result/ResultBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/result/ResultBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/result/ResultData.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/result/ResultData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/command/CommandBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/command/CommandBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/event/EventBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/event/EventBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/result/ResultBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/result/ResultBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/result/ResultData.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/result/ResultData.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-message/target/common-message-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/common-message-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-message/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-message/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motor-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/motor-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +65,7 @@
   <component name="ProjectId" id="1gLN4N96KT6fz11fvcdB5cqGrax" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common-core/src/main/java/com/motor/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../motor-apps-manager/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -106,18 +129,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/result/ResultData.java</url>
-          <line>22</line>
+          <line>23</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/result/ResultBuilder.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/result/ResultBuilder.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

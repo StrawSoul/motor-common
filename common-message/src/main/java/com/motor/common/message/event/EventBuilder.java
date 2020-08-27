@@ -22,6 +22,10 @@ public class EventBuilder<T> {
         event.header(key, value);
         return this;
     }
+    public EventBuilder token(String token){
+        event.header("token", token);
+        return this;
+    }
     public EventBuilder<T> eventType(String eventType){
         event.eventType(eventType);
         return this;
@@ -41,6 +45,7 @@ public class EventBuilder<T> {
         event.data(data);
         return event;
     }
+
 
     public EventBuilder<T> subject(String value){
         header("subject", value);

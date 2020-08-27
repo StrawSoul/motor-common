@@ -10,6 +10,7 @@
     <modules>
         <module>common-message</module>
         <module>common-core</module>
+        <module>common-message-http</module>
     </modules>
     <packaging>pom</packaging>
     <build>
