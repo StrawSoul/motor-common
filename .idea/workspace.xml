@@ -2,41 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09ed8a57-90dd-48ab-9c57-fec2f9fdcb5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/exception/ParameterEmptyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/exception/ParameterLegalException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/utils/BeanMapperUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/utils/MotorUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/utils/StringToDateConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/validator/BaseValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-core/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-core/src/main/resources/META-INF/dozer-date.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-message-http/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-message-http/src/main/java/com/motor/message/http/servlet/HttpServletCommandBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-message-http/src/main/java/com/motor/message/http/servlet/HttpServletRequestMessageHeaderGetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/MessageHeaderGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/domain/DefaultPrimaryKeyProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/domain/PrimaryKeyProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/paging/PagingRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/utils/DateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-spring-mybatis/src/main/java/com/motor/common/mybatis/MotorMybatisPagingInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-spring/common-spring.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-spring/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-spring/src/main/java/com/motor/common/spring/repository/SimpleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-core/common-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/common-core.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/domain/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/domain/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/domain/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/domain/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/domain/SearchCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/domain/SearchCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/domain/UnSupportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/domain/UnSupportRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/paging/PageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/paging/PageList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/utils/BeanMapperUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/utils/BeanMapperUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/utils/MotorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/utils/MotorUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/validator/BaseValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/validator/BaseValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/target/classes/com/motor/common/domain/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/target/classes/com/motor/common/domain/Repository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/target/classes/com/motor/common/domain/SearchCondition.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/target/classes/com/motor/common/domain/SearchCondition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/target/classes/com/motor/common/domain/UnSupportRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/target/classes/com/motor/common/domain/UnSupportRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/target/classes/com/motor/common/paging/PageList.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/target/classes/com/motor/common/paging/PageList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-core/target/common-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/target/common-core-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-message/common-message.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/common-message.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-message-http/src/main/java/com/motor/message/http/servlet/HttpServletCommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-message-http/src/main/java/com/motor/message/http/servlet/HttpServletCommandBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-message-http/src/main/java/com/motor/message/http/servlet/HttpServletRequestMessageHeaderGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-message-http/src/main/java/com/motor/message/http/servlet/HttpServletRequestMessageHeaderGetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/command/CommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/command/CommandBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/event/EventBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/event/EventBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/result/ResultBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/result/ResultBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/result/ResultData.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/result/ResultData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/Message.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/command/CommandBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/command/CommandBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/event/EventBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/event/EventBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/result/ResultBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/result/ResultBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/result/ResultData.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/classes/com/motor/common/message/result/ResultData.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-message/target/common-message-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/common-message-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-message/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-message/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common-message/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/motor-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/motor-common.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,18 +65,31 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1gLN4N96KT6fz11fvcdB5cqGrax" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../motor-apps-manager/pom.xml" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/dsl/sql" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.motor.common.dsl.bean" />
+      <recent name="com.motor.common.dsl.mysql" />
+      <recent name="com.motor.common.dsl" />
+      <recent name="com.motor.common.domain" />
+      <recent name="com.motor.common.dsl.handler" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/dsl/sql" />
+      <recent name="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/dsl/mysql" />
+      <recent name="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/dsl" />
+      <recent name="$PROJECT_DIR$/common-core/src/main/java/com/motor/common/table/handler" />
       <recent name="$PROJECT_DIR$/common-core/src/main/java/com/motor/common" />
-      <recent name="$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -88,6 +103,26 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="DefaultPrimaryKeyProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.motor.common.domain.DefaultPrimaryKeyProducer" />
+      <module name="common-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.motor.common.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DefaultPrimaryKeyProducer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
     <option name="projectSyncType">
@@ -129,8 +164,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/common-message/src/main/java/com/motor/common/message/result/ResultData.java</url>
-          <line>23</line>
+          <line>21</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common-core/src/main/java/com/motor/common/table/handler/TableManager.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

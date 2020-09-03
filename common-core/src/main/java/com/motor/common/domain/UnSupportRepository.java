@@ -1,5 +1,6 @@
 package com.motor.common.domain;
 
+import com.motor.common.dsl.bean.Condition;
 import com.motor.common.exception.BusinessRuntimeException;
 import com.motor.common.exception.ErrorCode;
 import com.motor.common.paging.PageList;
@@ -7,6 +8,7 @@ import com.motor.common.paging.Paging;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 /**
  * ===========================================================================================
@@ -27,7 +29,7 @@ import java.util.List;
  * <p>
  * ===========================================================================================
  */
-public abstract class UnSupportRepository<T, E extends Entity<T>> implements Repository<T,E> {
+public class UnSupportRepository<T, E extends Entity<T>> implements Repository<T,E> {
 
     private static ErrorCode UN_SUPPORT_METHOD = new ErrorCode("00000","UN_SUPPORT_METHOD", "未实现的方法");
     @Override
@@ -61,12 +63,32 @@ public abstract class UnSupportRepository<T, E extends Entity<T>> implements Rep
     }
 
     @Override
+    public int delete(Condition searchCondition) {
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
+    }
+
+    @Override
+    public int delete(Map<String, Object> searchCondition) {
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
+    }
+
+    @Override
     public void remove(T id) {
         throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
     }
 
     @Override
     public int remove(SearchCondition searchCondition) {
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
+    }
+
+    @Override
+    public int remove(Condition searchCondition) {
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
+    }
+
+    @Override
+    public int remove(Map<String, Object> searchCondition) {
         throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
     }
 
@@ -96,7 +118,17 @@ public abstract class UnSupportRepository<T, E extends Entity<T>> implements Rep
     }
 
     @Override
-    public E findById(String id) {
+    public E findOne(Condition searchCondition) {
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
+    }
+
+    @Override
+    public E findOne(Map<String, Object> searchCondition) {
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
+    }
+
+    @Override
+    public E findById(T id) {
         throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
     }
 
@@ -107,7 +139,7 @@ public abstract class UnSupportRepository<T, E extends Entity<T>> implements Rep
 
     @Override
     public List<E> findByIds(T... ids) {
-        return null;
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
     }
 
     @Override
@@ -116,7 +148,23 @@ public abstract class UnSupportRepository<T, E extends Entity<T>> implements Rep
     }
 
     @Override
+    public List<E> select(Condition searchCondition){
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
+    }
+    @Override
+    public List<E> select(Map<String,Object>  searchCondition){
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
+    }
+
+    @Override
     public PageList<E> search(SearchCondition searchCondition, Paging paging) {
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
+    }
+    public PageList<E> search(Condition searchCondition, Paging paging){
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
+    }
+
+    public PageList<E> search(Map<String,Object> searchCondition, Paging paging){
         throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
     }
 }

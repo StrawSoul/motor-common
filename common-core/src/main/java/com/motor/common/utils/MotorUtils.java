@@ -26,7 +26,7 @@ import java.util.Map;
  */
 public class MotorUtils {
 
-    public static boolean isNull(Object data){
+    public static boolean isEmpty(Object data){
         if(data == null){
             return true;
         }else {

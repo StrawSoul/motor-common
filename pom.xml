@@ -11,6 +11,8 @@
         <module>common-message</module>
         <module>common-core</module>
         <module>common-message-http</module>
+        <module>common-spring</module>
+        <module>common-spring-mybatis</module>
     </modules>
     <packaging>pom</packaging>
     <build>

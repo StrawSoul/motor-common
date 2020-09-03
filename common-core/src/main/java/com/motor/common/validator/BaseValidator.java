@@ -37,7 +37,7 @@ public class BaseValidator {
         throw new BusinessRuntimeException(UNKNOWN_ERROR, msg);
     }
     public void isEmpty(String key,Object value){
-        if(MotorUtils.isNull(value)){
+        if(MotorUtils.isEmpty(value)){
             throw new ParameterEmptyException(PARAM_EMPTY_ERROR, key, key);
         }
     }

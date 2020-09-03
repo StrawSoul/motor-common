@@ -107,6 +107,9 @@ public class Message<T > implements Serializable,Cloneable {
     public void userId(String userId){
         header("userId", userId);
     }
+    public String userId(){
+        return header("userId");
+    }
     public Message toMessage(){
         Message msg = new Message();
         msg.setHeader(this.getHeader());

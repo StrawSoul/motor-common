@@ -1,5 +1,9 @@
 package com.motor.common.domain;
 
+import com.motor.common.dsl.ConditionUtils;
+import com.motor.common.dsl.bean.Condition;
+import com.motor.common.dsl.bean.Specification;
+
 /**
  * ===========================================================================================
  * 设计说明
@@ -19,5 +23,10 @@ package com.motor.common.domain;
  * <p>
  * ===========================================================================================
  */
-public interface SearchCondition {
+public interface SearchCondition extends Specification {
+
+    @Override
+    default Condition toCondition() {
+        return ConditionUtils.notDeleted();
+    }
 }

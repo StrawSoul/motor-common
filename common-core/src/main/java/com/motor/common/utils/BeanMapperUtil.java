@@ -1,10 +1,16 @@
 package com.motor.common.utils;
 
 import com.motor.common.paging.PageList;
+import org.apache.commons.beanutils.BeanUtils;
 import org.dozer.DozerBeanMapper;
 
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.function.BiConsumer;
 
 /**
  * 实现各层VO-Entiy-Model之间的复制
@@ -87,5 +93,51 @@ public class BeanMapperUtil {
 				}
 		}
 		return anotherObj;
+	}
+
+	public static String toStringForUrlParams(Object target) {
+		StringBuffer params = new StringBuffer();
+		forEachParams(target, (name,value)->params.append(name).append("=").append(value).append("&"));
+		return params.toString();
+	}
+	public static Map<String, Object> toSimpleMap(Object target)   {
+		Map<String,Object> params = new HashMap<>();
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		forEachParams(target, (name,value)->{
+			if(value == null){
+				return;
+			}
+			if(value instanceof Date){
+				value = df.format(value);
+			}
+			params.put(name, value);
+		});
+		return params;
+	}
+
+	public static void  forEachParams(Object target, BiConsumer<String, Object> consumer){
+		Method[] methods = target.getClass().getMethods();
+		String methodName = null;
+		for (Method method : methods) {
+			methodName = method.getName();
+			if ((methodName.startsWith("get") && method.getParameterCount() ==0)) {
+				if(!"getClass".equals(methodName)){
+					methodName = methodName.replace("get","");
+					String c = methodName.substring(0,1);
+					String name = methodName.replaceFirst(c, c.toLowerCase());
+					try {
+						consumer.accept(name, method.invoke(target));
+					} catch (IllegalAccessException e) {
+						e.printStackTrace();
+					} catch (InvocationTargetException e) {
+						e.printStackTrace();
+					}
+
+				}
+			}
+		}
+	}
+	public static void fromMap(Object target, Map<String, ? extends Object> params) throws InvocationTargetException, IllegalAccessException {
+		BeanUtils.populate(target, params);
 	}
 }

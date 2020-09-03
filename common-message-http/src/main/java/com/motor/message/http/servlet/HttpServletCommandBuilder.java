@@ -35,6 +35,9 @@ public class HttpServletCommandBuilder {
     public static CommandBuilder get(){
         return threadLocal.get();
     }
+    public static<T> CommandBuilder<T> get(Class<T> clazz){
+        return threadLocal.get();
+    }
     public static void remove(){
         threadLocal.remove();
     }

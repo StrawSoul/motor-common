@@ -8,7 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="common-message-http" />
         <module name="common-message" />
+        <module name="common-spring-mybatis" />
         <module name="common-core" />
+        <module name="common-spring" />
       </profile>
     </annotationProcessing>
   </component>

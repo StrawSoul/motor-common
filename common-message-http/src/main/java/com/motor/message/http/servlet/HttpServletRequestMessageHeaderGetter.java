@@ -48,13 +48,13 @@ public class HttpServletRequestMessageHeaderGetter implements MessageHeaderGette
     public String get(String name) {
         name = "m-"+name;
         String value = getCookieValue(name);
-        if(MotorUtils.isNull(value)){
+        if(MotorUtils.isEmpty(value)){
             value = getParameter(name);
-        } else if(MotorUtils.isNull(value)){
+        } else if(MotorUtils.isEmpty(value)){
             value = getSessionValue(name);
-        } else if(MotorUtils.isNull(value)){
+        } else if(MotorUtils.isEmpty(value)){
             value = getSessionValue(name);
-        } else if(MotorUtils.isNull(value)){
+        } else if(MotorUtils.isEmpty(value)){
             value = getContextValue(name);
         }
         return value;
