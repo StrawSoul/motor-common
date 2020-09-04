@@ -167,4 +167,21 @@ public class UnSupportRepository<T, E extends Entity<T>> implements Repository<T
     public PageList<E> search(Map<String,Object> searchCondition, Paging paging){
         throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
     }
+
+    @Override
+    public int count(Condition searchCondition) {
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
+    }
+
+    @Override
+    public int count(SearchCondition searchCondition) {
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
+    }
+
+    @Override
+    public int count(Map<String, Object> searchCondition) {
+        throw new BusinessRuntimeException(UN_SUPPORT_METHOD);
+    }
+
+
 }

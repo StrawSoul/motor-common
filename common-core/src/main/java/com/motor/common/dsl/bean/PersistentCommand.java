@@ -1,7 +1,7 @@
 package com.motor.common.dsl.bean;
 
 import com.motor.common.table.bean.Attribute;
-import com.motor.common.utils.MotorUtils;
+import com.motor.common.utils.M;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -41,7 +41,7 @@ public class PersistentCommand {
     }
 
     public Collection<?> argValues(){
-        if(MotorUtils.isEmpty(args)){
+        if(M.isEmpty(args)){
             return Collections.EMPTY_LIST;
         }
         List<Object> list = args.stream().map(e -> e.getValue()).collect(Collectors.toList());

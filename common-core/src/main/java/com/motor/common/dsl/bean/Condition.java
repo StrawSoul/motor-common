@@ -81,6 +81,12 @@ public class Condition implements Serializable{
     public static Condition notnull(Column column) {
         return instance(column, ConditionType.notnull, 1);
     }
+    public static Condition exists(Column column, Object value) {
+        return instance(column, ConditionType.exists, value);
+    }
+    public static Condition notExists(Column column, Object value) {
+        return instance(column, ConditionType.notexists, value);
+    }
 
 
 

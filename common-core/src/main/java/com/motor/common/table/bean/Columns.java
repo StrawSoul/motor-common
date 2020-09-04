@@ -1,11 +1,8 @@
 package com.motor.common.table.bean;
 
-import com.motor.common.dsl.bean.ColumnWrapper;
-import com.motor.common.utils.BeanMapperUtil;
-import com.motor.common.utils.MotorUtils;
+import com.motor.common.utils.M;
 
 import java.util.*;
-import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 /**
@@ -38,7 +35,7 @@ public class Columns {
 
     public Columns(Collection<? extends Column> columns) {
         this.columns = new ArrayList<>(columns);
-        if(MotorUtils.isEmpty(columns)){
+        if(M.isEmpty(columns)){
             return;
         }
         int size = columns.size();

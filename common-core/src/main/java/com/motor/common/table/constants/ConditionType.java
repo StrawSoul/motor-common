@@ -27,8 +27,12 @@ public enum ConditionType {
     lte,
     //包含，  1,2,3,4
     in,
+
     // 不包含
     notin,
+    //包含，  1,2,3,4
+    exists,
+    notexists,
     /**
      *  双侧模糊匹配
      */

@@ -2,7 +2,7 @@ package com.motor.common.message.result;
 
 import com.motor.common.message.Message;
 import com.motor.common.message.event.Event;
-import com.motor.common.utils.MotorUtils;
+import com.motor.common.utils.M;
 
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public class ResultData<T> extends Event<T> {
         return Objects.equals(header("code"), "0");
     }
     public boolean isEmpty(){
-        return MotorUtils.isEmpty(data());
+        return M.isEmpty(data());
     }
     public boolean isSuccessAndNotEmpty(){
         return isSuccess() && !isEmpty();

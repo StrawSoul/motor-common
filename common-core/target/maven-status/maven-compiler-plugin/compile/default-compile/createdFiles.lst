@@ -20,6 +20,7 @@ com/motor/common/paging/Paging.class
 com/motor/common/business/BusinessCode.class
 com/motor/common/dsl/sql/condition/SqlConditionInTranslator.class
 com/motor/common/dsl/sql/SimpleSqlBuilder$GroupBuilder.class
+com/motor/common/dsl/sql/condition/SqlConditionExistsTranslator.class
 com/motor/common/paging/PagingRequest.class
 com/motor/common/domain/SearchCondition.class
 com/motor/common/dsl/sql/SimpleSqlBuilder$SelectBuilder.class
@@ -30,6 +31,7 @@ com/motor/common/table/handler/TableManager.class
 com/motor/common/domain/UnSupportRepository.class
 com/motor/common/dsl/bean/PersistentCommand.class
 com/motor/common/dsl/handler/PersistentDSLBuilders.class
+com/motor/common/dsl/sql/condition/SqlConditionNotExistsTranslator.class
 com/motor/common/table/bean/Attribute.class
 com/motor/common/exception/ParameterEmptyException.class
 com/motor/common/dsl/sql/condition/AbstractSqlTranslator.class
@@ -45,7 +47,7 @@ com/motor/common/table/utils/ColumnUtils.class
 com/motor/common/utils/StringToDateConverter.class
 com/motor/common/dsl/bean/KeyValueWeight.class
 com/motor/common/dsl/sql/SimpleSqlBuilder$WhereBuilder.class
-com/motor/common/utils/MotorUtils.class
+com/motor/common/utils/M.class
 com/motor/common/domain/Repository.class
 com/motor/common/table/bean/Table.class
 com/motor/common/dsl/sql/SimpleSqlBuilder$UpdateBuilder.class

@@ -1,9 +1,6 @@
 package com.motor.common.table.bean;
 
 import com.motor.common.utils.BeanMapperUtil;
-import com.motor.common.utils.MotorUtils;
-
-import java.util.*;
 
 /**
  * ===========================================================================================

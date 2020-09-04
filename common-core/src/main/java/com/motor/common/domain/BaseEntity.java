@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import javax.smartcardio.CommandAPDU;
 import java.util.Date;
 import java.util.Objects;
 import java.util.regex.Pattern;
@@ -173,4 +174,5 @@ public class BaseEntity<T> implements Entity<T>,Storable{
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 }

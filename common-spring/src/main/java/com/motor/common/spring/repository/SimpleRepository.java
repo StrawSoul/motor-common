@@ -12,7 +12,7 @@ import com.motor.common.paging.Paging;
 import com.motor.common.table.bean.Table;
 import com.motor.common.table.handler.TableManager;
 import com.motor.common.utils.BeanMapperUtil;
-import com.motor.common.utils.MotorUtils;
+import com.motor.common.utils.M;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.sql.SQLException;
@@ -56,12 +56,11 @@ public class SimpleRepository<T, E extends Entity<T>> extends UnSupportRepositor
         this.dialect = dialect;
         tableManager = new TableManager(dialect,jdbcTemplate.getDataSource());
         this.persistentDSLBuilders = persistentDSLBuilders;
-        try {
-            Table table = tableManager.findTableByName(tableName);
-            tableWrapper = new TableWrapper(table, persistentDSLBuilders.get(dialect).getDialect());
-        } catch (SQLException e) {
-            e.printStackTrace();
+        Table table = tableManager.findTableByName(tableName);
+        if(table == null){
+            throw new RuntimeException(String.format("表%s未找到", tableName));
         }
+        tableWrapper = new TableWrapper(table, persistentDSLBuilders.get(dialect).getDialect());
     }
     public SimpleRepository( String dialect, String tableName, Class<E> clazz, JdbcTemplate jdbcTemplate, PersistentDSLBuilders persistentDSLBuilders) {
         this( "default", dialect, tableName, clazz, jdbcTemplate ,persistentDSLBuilders);
@@ -179,7 +178,7 @@ public class SimpleRepository<T, E extends Entity<T>> extends UnSupportRepositor
     public E findOne(Condition condition) {
         PersistentCommand cmd = persistentDSLBuilders.get(dialect).toQuery(tableWrapper, tableWrapper.getColumnWrappers(), condition);
         Map map = queryOne(cmd);
-        if(MotorUtils.isEmpty(map)){
+        if(M.isEmpty(map)){
             return null;
         }
         E result = BeanMapperUtil.map(map, clazz);
@@ -203,7 +202,7 @@ public class SimpleRepository<T, E extends Entity<T>> extends UnSupportRepositor
         Condition condition = Condition.in(tableWrapper.findPrimaryColumn(), ids);
         PersistentCommand cmd = persistentDSLBuilders.get(dialect).toQuery(tableWrapper, tableWrapper.getColumnWrappers(), condition);
         List list = query(cmd);
-        if(MotorUtils.isEmpty(list)){
+        if(M.isEmpty(list)){
             return null;
         }
         List<E> l = BeanMapperUtil.mapList(list, clazz);
@@ -225,7 +224,7 @@ public class SimpleRepository<T, E extends Entity<T>> extends UnSupportRepositor
     public List<E> select(Condition condition) {
         PersistentCommand cmd = persistentDSLBuilders.get(dialect).toQuery(tableWrapper, tableWrapper.getColumnWrappers(), condition);
         List list = query(cmd);
-        if(MotorUtils.isEmpty(list)){
+        if(M.isEmpty(list)){
             return null;
         }
         List<E> l = BeanMapperUtil.mapList(list, clazz);
@@ -252,7 +251,7 @@ public class SimpleRepository<T, E extends Entity<T>> extends UnSupportRepositor
         Map<String, Object> map = queryOne(cmd.getCountCommand());
         Integer count = (Integer)map.getOrDefault("data",0);
         paging.setTotal(count);
-        if(MotorUtils.isEmpty(list)){
+        if(M.isEmpty(list)){
             return new PageList<>(paging, Collections.EMPTY_LIST);
         }
         List<E> l = BeanMapperUtil.mapList(list, clazz);
@@ -263,5 +262,23 @@ public class SimpleRepository<T, E extends Entity<T>> extends UnSupportRepositor
     public PageList<E> search(Map<String, Object> searchCondition, Paging paging) {
         Condition condition = ConditionUtils.fromMap(searchCondition, tableWrapper.getColumns());
         return search(condition, paging);
+    }
+
+    @Override
+    public int count(Condition searchCondition) {
+        PersistentCommand cmd = persistentDSLBuilders.get(dialect).toCount(tableWrapper, searchCondition);
+        Map<String, Object> map = queryOne(cmd);
+        return (Integer) map.get("data");
+    }
+
+    @Override
+    public int count(SearchCondition searchCondition) {
+        return count(searchCondition.toCondition());
+    }
+
+    @Override
+    public int count(Map<String, Object> searchCondition) {
+        Condition condition = ConditionUtils.fromMap(searchCondition, tableWrapper.getColumns());
+        return count(condition);
     }
 }

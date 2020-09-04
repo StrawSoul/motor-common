@@ -31,6 +31,8 @@ public class SqlConditionTranslatorHandler implements ConditionTranslatorHandler
         map.put(in, new SqlConditionInTranslator());
         map.put(notin, new SqlConditionNotInTranslator());
         map.put(like, new SqlConditionLikeTranslator());
+        map.put(exists, new SqlConditionExistsTranslator());
+        map.put(notexists, new SqlConditionNotExistsTranslator());
     }
     public SqlConditionTranslatorHandler(Map<ConditionType, ConditionSpecificationTranslator> map){
         this.map = map;

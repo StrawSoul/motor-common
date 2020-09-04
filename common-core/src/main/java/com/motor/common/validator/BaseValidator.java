@@ -3,7 +3,7 @@ package com.motor.common.validator;
 import com.motor.common.exception.BusinessRuntimeException;
 import com.motor.common.exception.ErrorCode;
 import com.motor.common.exception.ParameterEmptyException;
-import com.motor.common.utils.MotorUtils;
+import com.motor.common.utils.M;
 
 /**
  * ===========================================================================================
@@ -37,7 +37,7 @@ public class BaseValidator {
         throw new BusinessRuntimeException(UNKNOWN_ERROR, msg);
     }
     public void isEmpty(String key,Object value){
-        if(MotorUtils.isEmpty(value)){
+        if(M.isEmpty(value)){
             throw new ParameterEmptyException(PARAM_EMPTY_ERROR, key, key);
         }
     }

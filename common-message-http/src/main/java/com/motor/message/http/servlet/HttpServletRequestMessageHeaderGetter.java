@@ -1,7 +1,7 @@
 package com.motor.message.http.servlet;
 
 import com.motor.common.message.MessageHeaderGetter;
-import com.motor.common.utils.MotorUtils;
+import com.motor.common.utils.M;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.Cookie;
@@ -48,13 +48,13 @@ public class HttpServletRequestMessageHeaderGetter implements MessageHeaderGette
     public String get(String name) {
         name = "m-"+name;
         String value = getCookieValue(name);
-        if(MotorUtils.isEmpty(value)){
+        if(M.isEmpty(value)){
             value = getParameter(name);
-        } else if(MotorUtils.isEmpty(value)){
+        } else if(M.isEmpty(value)){
             value = getSessionValue(name);
-        } else if(MotorUtils.isEmpty(value)){
+        } else if(M.isEmpty(value)){
             value = getSessionValue(name);
-        } else if(MotorUtils.isEmpty(value)){
+        } else if(M.isEmpty(value)){
             value = getContextValue(name);
         }
         return value;

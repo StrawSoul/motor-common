@@ -3,7 +3,7 @@ package com.motor.common.domain;
 import com.motor.common.dsl.bean.Condition;
 import com.motor.common.paging.PageList;
 import com.motor.common.paging.Paging;
-import com.motor.common.utils.MotorUtils;
+import com.motor.common.utils.M;
 
 import java.util.*;
 
@@ -46,16 +46,16 @@ public interface Repository<T, E extends Entity<T>> {
         List<E> insertList = new ArrayList<>();
         Map<T,E> updateMap = new HashMap<>();
         for (E entity : entities) {
-            if (MotorUtils.isEmpty(entity.getId())) {
+            if (M.isEmpty(entity.getId())) {
                 insertList.add(entity);
             } else {
                 updateMap.put(entity.getId(), entity);
             }
         }
-        if(!MotorUtils.isEmpty(insertList)){
+        if(!M.isEmpty(insertList)){
             insert(insertList);
         }
-        if(!MotorUtils.isEmpty(updateMap)){
+        if(!M.isEmpty(updateMap)){
             Set<T> idSet = updateMap.keySet();
             List<E> oldList = findByIds(idSet);
             for (E oldEntity : oldList) {
@@ -64,14 +64,14 @@ public interface Repository<T, E extends Entity<T>> {
                 update(entity);
                 updateMap.remove(id);
             }
-            if(!MotorUtils.isEmpty(updateMap)){
+            if(!M.isEmpty(updateMap)){
                 insert(updateMap.values());
             }
         }
     }
 
     default boolean existsId(T id){
-        return !MotorUtils.isEmpty(id)  || findById(id) != null;
+        return !M.isEmpty(id)  || findById(id) != null;
     }
 
     void delete(T id);
@@ -129,4 +129,8 @@ public interface Repository<T, E extends Entity<T>> {
     PageList<E> search(Condition searchCondition, Paging paging);
 
     PageList<E> search(Map<String,Object>  searchCondition, Paging paging);
+
+    int count(Condition searchCondition);
+    int count(SearchCondition searchCondition);
+    int count(Map<String,Object>  searchCondition);
 }

@@ -4,12 +4,10 @@ import com.motor.common.dsl.bean.*;
 import com.motor.common.dsl.handler.AbstractSqlDialect;
 import com.motor.common.paging.Paging;
 import com.motor.common.table.utils.ColumnUtils;
-import com.motor.common.utils.MotorUtils;
+import com.motor.common.utils.M;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
-
-import static com.motor.common.table.utils.ColumnUtils.convertHumpToUnderline;
 
 public class MysqlDialect extends AbstractSqlDialect implements DSLDialect {
 
@@ -76,7 +74,7 @@ public class MysqlDialect extends AbstractSqlDialect implements DSLDialect {
     @Override
     public String alias(ColumnWrapper column) {
         String alias = column.getAlias();
-        if(MotorUtils.isEmpty(alias)){
+        if(M.isEmpty(alias)){
             return  ColumnUtils.convertHump(column.getName());
         } else {
             return alias;
