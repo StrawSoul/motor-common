@@ -70,12 +70,12 @@ public class SimpleRepository<T, E extends Entity<T>> extends UnSupportRepositor
     }
 
     private int update(PersistentCommand cmd){
-        int n = jdbcTemplate.update(cmd.getBody(), cmd.argValues());
+        int n = jdbcTemplate.update(cmd.getBody(), cmd.argValues().toArray());
         return n;
     }
 
     private List query(PersistentCommand cmd){
-        List<Map<String, Object>> list = jdbcTemplate.queryForList(cmd.getBody(), cmd.argValues());
+        List<Map<String, Object>> list = jdbcTemplate.queryForList(cmd.getBody(), cmd.argValues().toArray());
         return list;
     }
     private Map<String,Object> queryOne(PersistentCommand cmd){

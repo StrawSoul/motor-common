@@ -5,6 +5,7 @@ import com.motor.common.dsl.ConditionUtils;
 import com.motor.common.dsl.bean.*;
 import com.motor.common.paging.Paging;
 import com.motor.common.table.utils.ColumnUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
 import java.util.function.Supplier;
@@ -37,12 +38,20 @@ public class SimpleSqlBuilder {
             StringBuffer upsert = new StringBuffer(dialect.insertInto() ).append(dialect.tableName(wrap)).append(" ");
             StringBuffer columns = new StringBuffer();
             StringBuffer values = new StringBuffer();
+            ColumnWrapper primaryColumn = wrap.findPrimaryColumn();
+            String name = primaryColumn.getName();
+            boolean lowerCase = StringUtils.isAllLowerCase(name);
             params.forEach((k,v)->{
                 if(columns.length()!=0){
                     columns.append(",");
                     values.append(",");
                 }
                 String s = ColumnUtils.convertHumpToUnderline(k);
+                if(lowerCase){
+                    s = s.toLowerCase();
+                } else {
+                    s = s.toUpperCase();
+                }
                 ColumnWrapper column = (ColumnWrapper)wrap.findColumn(s);
                 if(column == null){
                     throw new RuntimeException(k + "=> "+ s +" in "+wrap.getName()+" not exists");

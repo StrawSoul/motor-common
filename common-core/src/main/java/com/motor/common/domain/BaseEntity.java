@@ -119,11 +119,11 @@ public class BaseEntity<T> implements Entity<T>,Storable{
     }
 
     @JsonIgnore
-    public int getOldVersion() {
+    public int oldVersion() {
         return oldVersion;
     }
 
-    public void setOldVersion(int oldVersion) {
+    public void oldVersion(int oldVersion) {
         this.oldVersion = oldVersion;
     }
 
