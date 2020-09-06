@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09ed8a57-90dd-48ab-9c57-fec2f9fdcb5a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-core/common-core.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-message-http/src/main/java/com/motor/message/http/servlet/HttpServletRequestMessageHeaderGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-message-http/src/main/java/com/motor/message/http/servlet/HttpServletRequestMessageHeaderGetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-message/common-message.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-spring-mybatis/common-spring-mybatis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-spring/common-spring.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-spring/src/main/java/com/motor/common/spring/repository/SimpleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-spring/src/main/java/com/motor/common/spring/repository/SimpleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motor-common.iml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -6,12 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="common-message-http" />
-        <module name="common-message" />
-        <module name="common-spring-mybatis" />
-        <module name="common-core" />
         <module name="common-spring" />
+        <module name="common-message-http" />
+        <module name="common-spring-mybatis" />
+        <module name="common-message" />
+        <module name="common-core" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common-core" target="1.8" />
+      <module name="common-message" target="1.8" />
+      <module name="motor-common" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

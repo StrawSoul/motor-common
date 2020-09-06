@@ -249,7 +249,7 @@ public class SimpleRepository<T, E extends Entity<T>> extends UnSupportRepositor
                 .toQueryPage(tableWrapper, tableWrapper.getColumnWrappers(), condition, paging);
         List list = query(cmd.getQueryCommand());
         Map<String, Object> map = queryOne(cmd.getCountCommand());
-        Integer count = (Integer)map.getOrDefault("data",0);
+        Integer count = ((Number)map.getOrDefault("data",0)).intValue();
         paging.setTotal(count);
         if(M.isEmpty(list)){
             return new PageList<>(paging, Collections.EMPTY_LIST);

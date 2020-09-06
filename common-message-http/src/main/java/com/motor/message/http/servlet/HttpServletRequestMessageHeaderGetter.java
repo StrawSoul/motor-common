@@ -38,9 +38,11 @@ public class HttpServletRequestMessageHeaderGetter implements MessageHeaderGette
         this.httpServletRequest = httpServletRequest;
         this.cookies = new HashMap<>();
         Cookie[] cookies = this.httpServletRequest.getCookies();
-        for (Cookie cookie : cookies) {
-            String name = cookie.getName();
-            this.cookies.put(name,cookie);
+        if(M.notEmpty(cookies)){
+            for (Cookie cookie : cookies) {
+                String name = cookie.getName();
+                this.cookies.put(name,cookie);
+            }
         }
     }
 
